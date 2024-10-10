@@ -1,0 +1,650 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Georgia;
+  src: url(../fonts/themify9f24.woff);
+}
+
+@font-face {
+  font-family: NVNFunkySignature;
+  src: url(../fonts/SVN-CocoFY.ttf);
+}
+
+body,
+html {
+  margin: 0;
+  font-family: Georgia, "serif";
+  font-style: normal;
+}
+
+body {
+  background-color: #e9f1f1;
+}
+
+.container {
+  margin: auto;
+  background-color: white;
+  height: 100%;
+  max-width: 400px;
+}
+
+@keyframes scale {
+  from {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  to {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+.avatar {
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #f09191;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.intro {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+}
+.intro .full-bg {
+  /* The image used */
+  background-image: url("../img/bg.JPG");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* transform-origin: center; */
+  animation: scale 5000ms ease-in-out forwards;
+}
+
+.intro-content {
+  background-color: #ffc4ae !important;
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  height: 55%;
+  width: 80%;
+  opacity: 1;
+  transition: 0.5s ease;
+  border: 1.5px solid white;
+  border-radius: 20px;
+  backdrop-filter: blur(1.5px);
+}
+.intro-content .title {
+  font-size: 2.2rem;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  font-family: "NVNFunkySignature";
+}
+.intro-content .icon {
+  margin-top: 1vh;
+}
+
+.intro .name {
+  font-size: 2rem;
+  margin: 1vh auto;
+}
+
+hr.solid {
+  border-top: 1px solid white;
+  width: 80%;
+}
+
+.section-time {
+  margin-top: 2vh;
+  margin-bottom: 1.5vh;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+.day,
+.hours {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  font-size: 1.1rem;
+}
+.day {
+  padding: 1vh 0;
+}
+.hours {
+  padding: 1vh 1vh;
+}
+.date {
+  font-weight: bold;
+  font-size: 2.4rem;
+}
+
+.month-year {
+  margin-top: 1vh;
+  margin-bottom: 1.5vh;
+  font-size: 1.2rem;
+}
+
+.address {
+  padding-top: 1.5vh;
+  font-size: 1.1rem;
+  line-height: 4.5vh;
+}
+
+.list-icon button {
+  margin-top: 2.2vh;
+  border: 1px solid white;
+  border-radius: 50%;
+  background: transparent;
+  height: 40px;
+  width: 40px;
+  color: white;
+}
+
+/* info */
+.info {
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.info .title {
+  font-family: "NVNFunkySignature";
+  font-size: 2.8rem;
+  color: #ff877d;
+}
+.info .title p {
+  margin-bottom: 0.5rem;
+}
+.invite-content {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.info-content em {
+  font-size: 1rem;
+  color: grey;
+}
+
+.info img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.text-animation {
+  animation: text-animation 5000ms forwards;
+}
+
+@keyframes text-animation {
+  0% {
+    top: 100%;
+  }
+
+  100% {
+    top: 5%;
+  }
+}
+
+/* count down */
+.count-down-container {
+  background-color: #ede7d3;
+  /* padding-top: 4rem;*/
+  padding-bottom: 0.6em;
+  text-align: center;
+}
+.count-down {
+  margin: 0em 1em 1em 1rem;
+  text-align: center;
+  height:  20rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.count-down .title {
+  font-family: NVNFunkySignature;
+  font-size: 10em;
+  width: 100%;
+  position: absolute;
+  color: white;
+  font-size: 1.75rem;
+  top: 51%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.6;
+}
+
+@keyframes scale-icon {
+  from {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  to {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+}
+
+.icon-calendar {
+  width: 40%;
+  height: 20%px;
+}
+
+.count-down .icon {
+  width: 30px;
+  height: 30px;
+  animation: scale-icon 1500ms infinite;
+  color: #fcc5d9;
+  position: absolute;
+  top: 40%;
+  left: 89%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.time .item {
+  margin-top: 1em;
+  padding: 0.5em 0.2rem;
+  position: relative;
+  text-align: center;
+  border-radius: 5px;
+  backdrop-filter: blur(3px);
+  background-color: #ffd5a6
+}
+.time {
+  display: grid;
+  grid-template-columns: 4.5em 4.5em 4.5em 4.5rem;
+  column-gap: 1rem;
+  grid-template-rows: 4rem;
+  justify-content: center;
+  align-items: center;
+  align-content: end;
+  color: #ff877d;
+  padding: 2rem;
+  /* position: absolute; */
+  /* top: 88%; */
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  border-bottom: 1px solid #ffd5a6;
+  opacity: 1;
+}
+#day,
+#hour,
+#minute,
+#seconds {
+  font-size: xxx-large;
+}
+
+/* love story style */
+.love-story {
+  position: relative;
+  overflow: hidden;
+}
+
+.love-story__content {
+  padding: 1em 0;
+  height: 100%;
+  background-color: #ffc4ae;
+}
+.love-story__title {
+  font-family: "NVNFunkySignature";
+  text-align: center;
+  font-size: 2.8rem;
+  color: #ff877d;
+}
+.love-story__row {
+  margin-top: 2vh;
+}
+.love-story__item {
+  text-align: end;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+  text-align: start;
+}
+
+.love-story__item p {
+  width: 40%;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.love-story__item img {
+  width: 40%;
+  height: auto;
+  border: 3px solid white;
+  border-radius: 8px;
+}
+
+.love-story-animation {
+  animation: love-story-animation 1000ms forwards;
+}
+
+@keyframes love-story-animation {
+  0% {
+    top: 50vh;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+.vertical-line {
+  border-left: 3px solid white;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  margin-left: -3px;
+}
+/* end love story style */
+
+/* start map */
+.map {
+  text-align: center;
+  padding: 0 2em;
+}
+
+.map__title {
+  font-family: "NVNFunkySignature";
+  text-align: center;
+  font-size: 2.8rem;
+  color: #ff877d;
+}
+.text-pink {
+  color: rgb(207 77 97);
+}
+
+.map__title p {
+  margin-bottom: 0.5rem;
+}
+.map__item p {
+  font-size: 0.9rem;
+  line-height: 1.25rem;
+}
+.map__location {
+  border-radius: 8px;
+  border: 1px solid #FFC4AE;
+  overflow: hidden;
+}
+.map__location img {
+  max-width: 100%;
+  padding-bottom: 0.5rem;
+}
+
+.map__location {
+  padding-bottom: 0.5rem;
+  font-size: 0.9rem;
+  background-color: #FFC4AE;
+  border: 1px solid #ff877d;
+}
+
+.map__location a {
+  color: rgb(207 77 97);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+/* end map */
+
+/* start mung cuoi */
+.mung-cuoi {
+  text-align: center;
+}
+
+.mung-cuoi .logo {
+  width: 15%;
+  height: 15%;
+  margin-top: 0.7rem;
+}
+
+.mung-cuoi .title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: NVNFunkySignature;
+  font-size: 2.8em;
+  display: flex;
+  justify-content: center;
+}
+.mung-cuoi .title p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #ff877d;
+}
+
+.mung-cuoi__info {
+  border-radius: 8px;
+  border: 1px solid #ffd5a6;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 0.5rem;
+}
+
+.mung-cuoi__info .header {
+  text-align: center;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #ffc4ae;
+}
+.size-18 {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+.mung-cuoi button {
+  border: none;
+  color: rgb(163 56 23);
+  background: none;
+  cursor: pointer;
+}
+
+.collapsible {
+  background-color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.mung-cuoi__info .active,
+.collapsible:hover {
+  /* background-color: white; */
+  border-radius: 8px 8px 0 0 !important;
+}
+
+.mung-cuoi__info .content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: white;
+}
+.mung-cuoi__info .content p {
+  font-size: 0.8rem;
+}
+/* end mung cuoi */
+
+/* start contact */
+.contact {
+  margin-top: 2rem;
+  text-align: center;
+  padding: 0 4rem;
+}
+
+.contact .title {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.contact__info {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.2rem;
+}
+.contact__info img {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+.size-20 {
+  width: 20px;
+  height: 20px;
+}
+.contact__info button {
+  border: none;
+  color: #fcc5d9;
+  background: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+/* end contact */
+.couple-img {
+  width: 60%;
+  height: auto;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 1rem;
+}
+.footer .author {
+  background-color: #ffc4ae;
+  font-size: 1.25rem;
+  font-family: "NVNFunkySignature";
+  color: white;
+  font-weight: bolder;
+}
+
+.footer .author button {
+  color: #fcc5d9;
+  border: none;
+  background: none;
+  vertical-align: middle;
+}
+
+.mini_calendar {
+  width: 100%;
+  position: absolute;
+  color: white;
+  /* font-size: 1rem; */
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-bottom: 1px solid #c6c6c6;
+}
+
+.mini_calendar table {
+  caption-side: top;
+  width: 100%;
+}
+
+.mini_calendar table th {
+  text-align: center;
+  padding: 8px 0;
+  color: #484747;
+  border-top: 1px solid #cfcfd0;
+  border-bottom: 1px solid #cfcfd0;
+  font-size: 0.9em;
+  font-weight: normal;
+}
+
+.mini_calendar table tr:nth-child(2) td {
+  padding-top: 20px;
+  height: 60px;
+}
+
+.mini_calendar td {
+  font-size: 0.9em;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  color: #484747;
+}
+
+.mini_calendar .calendar-month {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 400;
+  color: #203447;
+  text-transform: uppercase;
+}
+
+.mini_calendar td #today {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 20px;
+  padding: 5px;
+  /* background-image: url("../img/hearts.png"); */
+  color: #fff;
+  border-radius: 50%;
+}
+
+#clock {
+  max-width: 485px;
+  overflow: hidden;
+}
+
+.mini_calendar .calendar-month,
+.weddingdate-section .mini_calendar table th {
+  color: #9dae82;
+}
+
+.mini_calendar .calendar-month {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 400;
+  color: #203447;
+  text-transform: uppercase;
+}
+
+caption {
+  padding-top: 1rem;
+  color: #6c757d;
+  text-align: left;
+}
+
+.mini_calendar .calendar-month,
+.weddingdate-section .mini_calendar table th {
+  color: #72ddf7;
+}

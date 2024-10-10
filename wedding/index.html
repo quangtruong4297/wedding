@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="album.css" />
+    <script src="../js/feather.min.js"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="../swiper/swiper-bundle.min.css" />
+
+    <link rel="icon" href="../img/couple.png" />
+
+    <title>T&O Invitation Wedding</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="intro">
+        <div class="full-bg"></div>
+        <div class="intro-content">
+          <p class="title">Save the Date</p>
+          <div>
+            <p class="name">Quang Trường</p>
+            <i class="icon" data-feather="heart"></i>
+            <p class="name">Nguyễn Oanh</p>
+          </div>
+          <hr class="solid" />
+          <div class="section-time">
+            <div class="day">CHỦ NHẬT</div>
+            <div class="date">12</div>
+            <div class="hours">14H00</div>
+          </div>
+
+          <div class="month-year">10.2024</div>
+
+          <hr class="solid" />
+          <div class="list-icon">
+            <button onclick="goTo('contact')">
+              <i data-feather="phone"></i>
+            </button>
+            <button onclick="goTo('mung-cuoi')">
+              <i data-feather="gift"></i>
+            </button>
+            <button onclick="goTo('map')"><i data-feather="map"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="info">
+        <div class="title">
+          <p>Lời mời</p>
+        </div>
+        <div class="invite-content">
+          <p>
+            Thân mời bạn & gia đình
+            <br />
+            đến tham dự lễ cưới của chúng mình.
+            <br />
+            Chúng mình biết bạn rất bận rộn với công việc, gia đình.
+            <br />
+            Nhưng hy vọng bạn có thể bớt chút thời gian đến chung vui cùng chúng
+            mình.
+          </p>
+        </div>
+        <div class="info-content">
+          <p>
+            <div class="avatar">
+              <img src="../img/groom.png" alt="double heart" />
+          </div>
+            <em>Chú rể: </em>Dương Quang Trường
+          </p>
+          <p>
+            <div class="avatar">
+              <img src="../img/bride.png" alt="double heart" />
+          </div>
+            <em>Cô dâu: </em>Nguyễn Thị Oanh
+          </p>
+          <br/>
+        </div>
+      </div>
+
+      <div class="count-down-container">
+        <img class="icon-calendar" src="../img/icon-calendar.png" alt="" />
+        <div class="count-down">
+          <div class="title">
+            <p>Save The Date</p>
+          </div>
+          <img class="icon" src="../img/hearts.png" alt="double heart" />
+          <div class="mini_calendar">
+            <table>
+              <caption class="calendar-month">
+                Tháng 4 / 2024
+              </caption>
+              <tbody>
+                <tr>
+                  <th abbr="Monday">Thứ 2</th>
+                  <th abbr="Tuesday">Thứ 3</th>
+                  <th abbr="Wednesday">Thứ 4</th>
+                  <th abbr="Thursday">Thứ 5</th>
+                  <th abbr="Friday">Thứ 6</th>
+                  <th abbr="Saturday">Thứ 7</th>
+                  <th abbr="Sunday">CN</th>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>8</td>
+                  <td>9</td>
+                  <td>10</td>
+                  <td>11</td>
+                  <td>12</td>
+                  <td><div id="today">13</div></td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td>15</td>
+                  <td>16</td>
+                  <td>17</td>
+                  <td>18</td>
+                  <td>19</td>
+                  <td>20</td>
+                </tr>
+                <tr>
+                  <td>21</td>
+                  <td>22</td>
+                  <td>23</td>
+                  <td>24</td>
+                  <td>25</td>
+                  <td>26</td>
+                  <td>27</td>
+                </tr>
+                <tr>
+                  <td>28</td>
+                  <td>29</td>
+                  <td>30</td>
+                  <td>31</td>
+                  <td id="emptydays" colspan="3">&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="time">
+        <div class="item">
+          <div id="day">00</div>
+          Ngày
+        </div>
+        <div class="item">
+          <div id="hour">00</div>
+          Giờ
+        </div>
+        <div class="item">
+          <div id="minute">00</div>
+          Phút
+        </div>
+        <div class="item">
+          <div id="seconds">00</div>
+          Giây
+        </div>
+      </div>
+
+      <div class="album">
+        <div class="album__header">
+          <div class="title">
+            <img class="logo" src="../img/album-icon.svg" alt="" />
+            <p>Album ảnh cưới</p>
+          </div>
+        </div>
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="../img/album/01.JPG" alt="01" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../img/album/02.JPG" alt="02" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../img/album/03.JPG" alt="03" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../img/album/04.jpg" alt="04" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../img/album/05.JPG" alt="05" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../img/album/06.JPG" alt="06" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../img/album/07.JPG" alt="07" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../img/album/08.JPG" alt="08" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../img/album/09.JPG" alt="09" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../img/album/10.JPG" alt="10" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <div class="love-story">
+        <div class="love-story__title">
+          <p>Love Story</p>
+        </div>
+        <div class="love-story__content">
+          <div class="love-story__row">
+            <div class="love-story__item">
+              <p></p>
+              <img src="../img/love-story/05.jpg" alt="" />
+            </div>
+          </div>
+          <div class="love-story__row">
+            <div class="love-story__item reverse">
+              <p></p>
+              <img src="../img/love-story/04.JPG" alt="" />
+            </div>
+          </div>
+          <div class="love-story__row">
+            <div class="love-story__item">
+              <p></p>
+              <img src="../img/love-story/03.JPEG" alt="" />
+            </div>
+          </div>
+          <div class="love-story__row">
+            <div class="love-story__item reverse">
+              <p></p>
+              <img src="../img/love-story/02.png" alt="" />
+            </div>
+          </div>
+
+          <div class="love-story__row">
+            <div class="love-story__item">
+              <p></p>
+              <img src="../img/love-story/01.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="vertical-line"></div>
+      </div>
+
+      <div id="map" class="map">
+        <div class="map__title">
+          <p>Địa điểm</p>
+        </div>
+        <div class="map__item">
+          <p>
+            <span class="text-pink">Nhà trai: </span><br/> xã Lam Cốt, huyện Tân Yên, tỉnh Bắc Giang
+          </p>
+          <div class="map__location">
+            <img src="../img/map/map-1.png" alt="" />
+            <a href="https://maps.app.goo.gl/eJG8rLpm3EFNM6uG7" target="_blank"
+              ><i class="size-18" data-feather="map-pin"></i> Chỉ đường</a
+            >
+          </div>
+        </div>
+        <div class="map__item">
+          <p>
+            <span class="text-pink">Nhà gái: </span> <br />Thôn 2, Thiệu Viên, huyện Thiệu Hóa, <br/>tỉnh Thanh Hóa
+          </p>
+          <div class="map__location">
+            <img src="../img/map/map-2.png" alt="" />
+            <a href="https://maps.app.goo.gl/CMQxU9Ydu8PNAed58" target="_blank"
+              ><i class="size-18" data-feather="map-pin"></i> Chỉ đường</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div id="mung-cuoi" class="mung-cuoi">
+        <div class="title">
+          <img class="logo" src="../img/gift-box-heart.svg" alt="" />
+          <p>Quà mừng cưới</p>
+        </div>
+        <div class="mung-cuoi__info">
+          <div class="header collapsible active">Số tài khoản chú rể</div>
+          <div class="content" style="max-height: 102px">
+            <p>TPBank</p>
+            <p id="card-number-1">
+              05078041801<button>
+                <i
+                  class="size-18"
+                  data-feather="copy"
+                  onclick="copyText('card-number-1')"
+                ></i>
+              </button>
+            </p>
+            <p>DUONG QUANG TRUONG</p>
+          </div>
+        </div>
+        <div class="mung-cuoi__info">
+          <div class="header collapsible active">Số tài khoản cô dâu</div>
+          <div class="content" style="max-height: 102px">
+            <p>TechcomBank</p>
+            <p id="card-number-2">
+              19036327626014<button>
+                <i
+                  class="size-18"
+                  data-feather="copy"
+                  onclick="copyText('card-number-2')"
+                ></i>
+              </button>
+            </p>
+            <p>NGUYEN THI OANH</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="contact" class="contact">
+        <div class="title">
+          <p>
+            THÔNG TIN LIÊN HỆ
+            <br />
+          </p>
+        </div>
+        <div class="contact__info">
+          <div><img src="../img/icon_groom.png" alt="" /></div>
+          <div>Dương Quang Trường</div>
+          <button onclick="copyPhoneCr()">
+            <i class="size-20" data-feather="copy"></i>
+          </button>
+        </div>
+        <div class="contact__info">
+          <div><img src="../img/icon_bride.png" alt="" /></div>
+          <div>Nguyễn Thị Oanh</div>
+          <button onclick="copyPhoneCd()">
+            <i class="size-20" data-feather="copy"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="author">
+          Quang Trường<img style="width: 20px; height: 20px;" src="../img/hearts.png"/>Nguyễn Oanh
+        </div>
+      </div>
+    </div>
+    <script>
+      feather.replace();
+    </script>
+    <!-- Swiper JS -->
+    <script src="../swiper/swiper-bundle.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
